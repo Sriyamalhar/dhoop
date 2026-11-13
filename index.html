@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dhoop | Rooftop solar for housing societies</title>
+  <meta name="description" content="Dhoop is a workspace for housing societies, campuses and commercial roofs that want rooftop solar: sizing, paperwork, generation tracking and fair billing in one place.">
+  <meta name="theme-color" content="#0B2A6F">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B2A6F'/%3E%3Cpath d='M6 22a10 10 0 0 1 20 0z' fill='%23FFC21A'/%3E%3Cpath d='M4 25h24' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Noto+Sans+Devanagari:wght@600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-ruler" viewBox="0 0 24 24"><path d="M3 17 17 3l4 4L7 21z"/><path d="m7 13 2 2m1-5 2 2m1-5 2 2"/></symbol>
+    <symbol id="i-ledger" viewBox="0 0 24 24"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11M9 8h6"/></symbol>
+    <symbol id="i-split" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M12 12h9"/></symbol>
+    <symbol id="i-forecast" viewBox="0 0 24 24"><circle cx="8" cy="7" r="2.6"/><path d="M8 2v.8M3 7h.8M4.5 3.5l.6.6M11.5 3.5l-.6.6"/><path d="M7 21h10a4 4 0 0 0 .6-7.95A5.5 5.5 0 0 0 7.2 14.2 3.4 3.4 0 0 0 7 21z"/></symbol>
+    <symbol id="i-paper" viewBox="0 0 24 24"><path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5M9 14l2 2 4-4"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#features">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="Dhoop, back to top">
+      <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0B2A6F"/><path d="M6 22a10 10 0 0 1 20 0z" fill="#FFC21A"/><path d="M4 25h24" stroke="#fff" stroke-width="2"/></svg>
+      <span class="logo-word">Dhoop</span>
+      <span class="logo-hi" lang="hi">धूप</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#assistant">Ask Dhoop</a>
+      <a href="#how">How it works</a>
+      <a href="#calculator">Calculator</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-solid nav-cta" href="#contact" data-plan="">Get started</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <h1>Your society's roof is an unused power plant.</h1>
+      <div class="hero-sub">
+        <p>Dhoop helps housing societies, campuses and commercial buildings plan rooftop solar, get the paperwork approved, and share the savings fairly with every flat.</p>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="#calculator">See what your roof earns</a>
+          <a class="btn btn-line" href="#contact" data-plan="">Book a demo</a>
+        </div>
+      </div>
+    </div>
+
+    <figure class="scene" id="scene">
+      <svg id="sceneSvg" viewBox="0 0 1200 440" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Illustration of apartment blocks with rooftop solar panels. The sun moves across the sky as you drag the time slider.">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop id="skyTop" offset="0" stop-color="#4F9BD3"/>
+            <stop id="skyBot" offset="1" stop-color="#CFE8F2"/>
+          </linearGradient>
+          <pattern id="cells" width="11" height="11" patternUnits="userSpaceOnUse">
+            <rect width="11" height="11" fill="#0B2A6F"/>
+            <path d="M0 .5H11M.5 0V11" stroke="#8FA8DC" stroke-width="1" opacity=".6"/>
+          </pattern>
+          <pattern id="wins" width="16" height="18" patternUnits="userSpaceOnUse">
+            <rect x="4" y="5" width="8" height="9" fill="#2A3550" opacity=".28"/>
+          </pattern>
+          <pattern id="winsLit" width="16" height="18" patternUnits="userSpaceOnUse">
+            <rect x="4" y="5" width="8" height="9" fill="#FFC21A"/>
+          </pattern>
+        </defs>
+        <rect width="1200" height="440" fill="url(#sky)"/>
+        <g id="sun">
+          <circle id="sunHalo" r="78" fill="#FFF3C4" opacity=".4"/>
+          <circle r="34" fill="#FFC21A"/>
+        </g>
+        <g id="city"></g>
+        <rect y="398" width="1200" height="42" fill="#0D1B33"/>
+        <rect y="398" width="1200" height="4" fill="#C8D0DB" opacity=".5"/>
+        <g id="tag" font-family="Bricolage Grotesque, sans-serif" font-weight="700">
+          <rect id="tagBox" x="0" y="0" width="112" height="30" rx="4" fill="#0D1B33"/>
+          <text id="tagText" x="56" y="20" text-anchor="middle" font-size="15" fill="#FFC21A">0 kW</text>
+          <path d="M50 30h12l-6 7z" fill="#0D1B33"/>
+        </g>
+      </svg>
+
+      <figcaption class="meter">
+        <div class="meter-id">
+          <strong>Demo society, 240 flats</strong>
+          <span>150 kW rooftop plant. Sample readings.</span>
+        </div>
+        <dl class="meter-read">
+          <div><dt>Time</dt><dd id="rdTime">12:30 pm</dd></div>
+          <div><dt>Output now</dt><dd id="rdKw">0 kW</dd></div>
+          <div><dt>Generated today</dt><dd id="rdKwh">0 kWh</dd></div>
+          <div><dt>Saved today</dt><dd id="rdSaved">&#8377;0</dd></div>
+        </dl>
+        <label class="dial">
+          <span>Drag to move the sun</span>
+          <input type="range" id="dial" min="5" max="19" step="0.05" value="5.5" aria-label="Time of day">
+        </label>
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" id="features">
+    <div class="wrap">
+      <header class="section-head">
+        <h2>Everything a rooftop plant needs, apart from the panels</h2>
+        <p>Dhoop doesn't sell or install hardware. It keeps the numbers, paperwork and billing in one workspace, whichever installer you pick.</p>
+      </header>
+
+      <ul class="rows">
+        <li class="row">
+          <svg class="ico" aria-hidden="true"><use href="#i-ruler"/></svg>
+          <div class="row-body">
+            <h3>Size the plant</h3>
+            <p>Enter your roof area and last year's electricity bills. Dhoop returns plant size, cost and payback before anyone climbs up to measure.</p>
+          </div>
+          <div class="reading"><span>Roof 6,000 sq ft</span><b>60 kW plant</b></div>
+        </li>
+        <li class="row">
+          <svg class="ico" aria-hidden="true"><use href="#i-ledger"/></svg>
+          <div class="row-body">
+            <h3>Track every unit</h3>
+            <p>Generation, export and import sit in one ledger, matched each month against your DISCOM net-metering statement.</p>
+          </div>
+          <div class="reading"><span>Exported in October</span><b>8,420 kWh</b></div>
+        </li>
+        <li class="row">
+          <svg class="ico" aria-hidden="true"><use href="#i-split"/></svg>
+          <div class="row-body">
+            <h3>Split savings fairly</h3>
+            <p>Common-area bills are credited first. What remains is shared across flats by flat size or equally. Residents settle through UPI.</p>
+          </div>
+          <div class="reading"><span>Credit per flat</span><b>&#8377;412 a month</b></div>
+        </li>
+        <li class="row">
+          <svg class="ico" aria-hidden="true"><use href="#i-forecast"/></svg>
+          <div class="row-body">
+            <h3>Forecast and fault alerts</h3>
+            <p>See tomorrow's expected output. Get a message when one string of panels falls behind its neighbours, usually dust or a failed connector.</p>
+          </div>
+          <div class="reading"><span>Tomorrow, expected</span><b>612 kWh</b></div>
+        </li>
+        <li class="row">
+          <svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>
+          <div class="row-body">
+            <h3>Ask your roof anything</h3>
+            <p>Type a question about output, dues or next month. Dhoop answers in plain English and shows the numbers it used.</p>
+          </div>
+          <div class="reading"><span>Tuesday against forecast</span><b>&#8722;31%</b></div>
+        </li>
+        <li class="row">
+          <svg class="ico" aria-hidden="true"><use href="#i-paper"/></svg>
+          <div class="row-body">
+            <h3>Chase the paperwork</h3>
+            <p>The RWA resolution, net-metering application, subsidy claim and inspection each get an owner, a due date and a status.</p>
+          </div>
+          <div class="reading"><span>Approvals</span><b>3 of 5 done</b></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ASK DHOOP -->
+  <section class="section section-white" id="assistant">
+    <div class="wrap ask-grid">
+      <div class="ask-copy">
+        <h2>Ask your roof a question</h2>
+        <p>Dhoop reads the generation log, UPI settlements and approvals tracker, then answers in plain English. Every answer lists where its numbers came from.</p>
+        <ul class="ask-chips" id="aChips" aria-label="Suggested questions"></ul>
+        <p class="note">Answers come from the demo society's sample data. This demo knows four questions, so pick one or type something close.</p>
+      </div>
+      <div class="ask-panel" role="region" aria-label="Ask Dhoop demo">
+        <div class="ask-head"><b>Ask Dhoop</b><span>Demo society, sample data</span></div>
+        <div class="ask-feed" id="aFeed"></div>
+        <p class="sr" id="aStatus" aria-live="polite"></p>
+        <form class="ask-form" id="aForm" autocomplete="off">
+          <label class="sr" for="aInput">Ask Dhoop a question</label>
+          <input id="aInput" type="text" placeholder="Ask about output, dues or forecasts" maxlength="120">
+          <button type="submit" class="btn btn-solid">Ask</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section-tint" id="how">
+    <div class="wrap how">
+      <header class="how-intro">
+        <h2>How a society uses Dhoop</h2>
+        <p>Someone on the committee signs up, adds the roof and the bills, and invites the treasurer and the installer. From there Dhoop keeps everybody working from the same numbers.</p>
+        <p class="note">Timings below are typical for a mid-sized society.</p>
+      </header>
+
+      <ol class="timeline">
+        <li>
+          <span class="when">Day 1</span>
+          <div><h3>Measure</h3><p>Add your roof area and twelve months of bills. Dhoop sizes the plant and shows the payback.</p></div>
+        </li>
+        <li>
+          <span class="when">Weeks 1 to 3</span>
+          <div><h3>Approve</h3><p>Dhoop drafts the resolution for your general body and tracks the net-metering and subsidy applications.</p></div>
+        </li>
+        <li>
+          <span class="when">Weeks 4 to 8</span>
+          <div><h3>Switch on</h3><p>Your installer works through a shared checklist: install, inspection, meter swap, go-live.</p></div>
+        </li>
+        <li>
+          <span class="when">Every month</span>
+          <div><h3>Share the savings</h3><p>Generation is reconciled with the DISCOM statement. Each flat sees its credit and settles by UPI.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section class="section dark" id="calculator">
+    <div class="wrap">
+      <header class="section-head">
+        <h2>What would your roof earn?</h2>
+        <p>Move the sliders. Everything updates as you go.</p>
+      </header>
+
+      <div class="calc">
+        <form class="calc-in" id="calcForm" onsubmit="return false">
+          <div class="field-range">
+            <label for="inBill">Monthly electricity bill <output id="outBill"></output></label>
+            <input type="range" id="inBill" min="20000" max="600000" step="5000" value="150000">
+          </div>
+          <div class="field-range">
+            <label for="inRoof">Usable roof area <output id="outRoof"></output></label>
+            <input type="range" id="inRoof" min="1500" max="30000" step="500" value="6000">
+          </div>
+          <div class="field-range">
+            <label for="inTariff">Price per unit <output id="outTariff"></output></label>
+            <input type="range" id="inTariff" min="5" max="12" step="0.5" value="8">
+          </div>
+          <p class="assume">Assumes 100 sq ft per kW, 120 units per kW each month, &#8377;52,000 per kW installed and 0.5% output loss a year. No tariff rise is included. This is a planning estimate, not a quote.</p>
+        </form>
+
+        <div class="calc-out" aria-live="polite">
+          <div class="headline-stat">
+            <span class="k">Pays for itself in</span>
+            <span class="v" id="rPayback">0 years</span>
+          </div>
+          <dl class="stats">
+            <div><dt>Plant size</dt><dd id="rKw">0 kW</dd></div>
+            <div><dt>Saves each month</dt><dd id="rSave">0</dd></div>
+            <div><dt>Net gain over 25 years</dt><dd id="rNet">0</dd></div>
+            <div><dt>Share of bill covered</dt><dd id="rCover">0%</dd></div>
+            <div><dt>Cost to install</dt><dd id="rCapex">0</dd></div>
+            <div><dt>CO&#8322; avoided a year</dt><dd id="rCo2">0 t</dd></div>
+          </dl>
+          <p class="limit" id="rLimit"></p>
+          <figure class="chart">
+            <svg id="chart" viewBox="0 0 560 220" role="img" aria-label="Chart of cumulative cash position over 25 years"></svg>
+            <figcaption>Cumulative cash position over 25 years</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing">
+    <div class="wrap">
+      <header class="section-head">
+        <h2>Pricing that scales with your society</h2>
+        <p>One flat fee for the workspace. No per-resident charges.</p>
+        <div class="toggle" role="group" aria-label="Billing period">
+          <button type="button" class="on" data-bill="month" aria-pressed="true">Monthly</button>
+          <button type="button" data-bill="year" aria-pressed="false">Yearly, 2 months free</button>
+        </div>
+      </header>
+
+      <div class="plans">
+        <article class="plan">
+          <h3>Starter</h3>
+          <p class="who">One roof, up to 60 flats</p>
+          <p class="price"><span class="amt" data-price="2999">&#8377;2,999</span><span class="per">a month</span></p>
+          <p class="bill-note" aria-hidden="true">&nbsp;</p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Plant sizing and payback</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Paperwork tracker</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Monthly generation ledger</li>
+          </ul>
+          <a class="btn btn-line" href="#contact" data-plan="Starter">Choose Starter</a>
+        </article>
+
+        <article class="plan plan-main">
+          <h3>Society</h3>
+          <p class="who">Up to 400 flats and three roofs</p>
+          <p class="price"><span class="amt" data-price="7999">&#8377;7,999</span><span class="per">a month</span></p>
+          <p class="bill-note" aria-hidden="true">&nbsp;</p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Everything in Starter</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Per-flat savings split and UPI settlement</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Forecasts and fault alerts</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>AGM-ready savings summary</li>
+          </ul>
+          <a class="btn btn-solid" href="#contact" data-plan="Society">Choose Society</a>
+        </article>
+
+        <article class="plan">
+          <h3>Campus</h3>
+          <p class="who">Many roofs, one account</p>
+          <p class="price"><span class="amt-text">Let's talk</span></p>
+          <p class="bill-note" aria-hidden="true">&nbsp;</p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Everything in Society</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Unlimited roofs and users</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Data export for your auditors</li>
+          </ul>
+          <a class="btn btn-line" href="#contact" data-plan="Campus">Talk to us</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-tint" id="faq">
+    <div class="wrap faq">
+      <header>
+        <h2>Questions committees ask us</h2>
+      </header>
+      <div class="faq-list">
+        <details>
+          <summary>Do we have to use your installer?</summary>
+          <p>Dhoop doesn't install anything. Bring any installer. They get a login to update the checklist, and you keep control of the numbers.</p>
+        </details>
+        <details>
+          <summary>How are savings split between flats?</summary>
+          <p>Common-area bills such as lifts, pumps and corridor lights are credited first. The remaining credit is shared by flat size or equally, whichever your general body approves.</p>
+        </details>
+        <details>
+          <summary>What if the roof is shared between towers?</summary>
+          <p>Add each tower as its own roof in the same workspace. The Society plan covers three roofs, and Campus has no limit.</p>
+        </details>
+        <details>
+          <summary>What happens to residents' data?</summary>
+          <p>Resident details stay inside your society's workspace and are visible only to the people you invite. Payments go through UPI, so Dhoop never stores card details.</p>
+        </details>
+        <details>
+          <summary>Is this a real product?</summary>
+          <p>It's a concept project with sample data, built as a front-end assignment. Figures on this page are illustrative, and the demo form doesn't send anything.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="wrap contact">
+      <div class="contact-info">
+        <h2>Book a 20-minute walkthrough</h2>
+        <p>Tell us about your roof. We'll show you the numbers for your society and answer the questions your committee is likely to ask.</p>
+        <ul class="details">
+          <li><svg aria-hidden="true"><use href="#i-mail"/></svg><span>hello@dhoop.example</span></li>
+          <li><svg aria-hidden="true"><use href="#i-phone"/></svg><span>+91 00000 00000</span></li>
+          <li><svg aria-hidden="true"><use href="#i-pin"/></svg><span>Sample address, Delhi NCR</span></li>
+        </ul>
+      </div>
+
+      <div class="form-wrap">
+        <form id="demoForm" novalidate>
+          <div class="field">
+            <label for="fName">Your name</label>
+            <input id="fName" name="name" type="text" autocomplete="name" required aria-describedby="eName">
+            <p class="err" id="eName" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="fEmail">Email</label>
+            <input id="fEmail" name="email" type="email" autocomplete="email" required aria-describedby="eEmail">
+            <p class="err" id="eEmail" role="alert"></p>
+          </div>
+          <div class="two">
+            <div class="field">
+              <label for="fOrg">Society or organisation</label>
+              <input id="fOrg" name="org" type="text" autocomplete="organization" required aria-describedby="eOrg">
+              <p class="err" id="eOrg" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="fPhone">Phone <span class="opt">(optional)</span></label>
+              <input id="fPhone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit mobile" aria-describedby="ePhone">
+              <p class="err" id="ePhone" role="alert"></p>
+            </div>
+          </div>
+          <div class="two">
+            <div class="field">
+              <label for="fFlats">Number of flats</label>
+              <select id="fFlats" name="flats" required aria-describedby="eFlats">
+                <option value="">Choose one</option>
+                <option>Up to 60</option>
+                <option>61 to 200</option>
+                <option>201 to 400</option>
+                <option>More than 400</option>
+                <option>Not a housing society</option>
+              </select>
+              <p class="err" id="eFlats" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="fPlan">Plan you're considering</label>
+              <select id="fPlan" name="plan">
+                <option value="">Not sure yet</option>
+                <option>Starter</option>
+                <option>Society</option>
+                <option>Campus</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn btn-solid wide" type="submit">Request a demo</button>
+        </form>
+
+        <div class="success" id="success" hidden tabindex="-1">
+          <svg aria-hidden="true"><use href="#i-check"/></svg>
+          <h3 id="successTitle">Demo requested</h3>
+          <p id="successText"></p>
+          <button class="btn btn-line" type="button" id="again">Request another demo</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap foot">
+    <div>
+      <a class="logo logo-light" href="#top" aria-label="Dhoop, back to top">
+        <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#FFC21A"/><path d="M6 22a10 10 0 0 1 20 0z" fill="#0B2A6F"/><path d="M4 25h24" stroke="#0B2A6F" stroke-width="2"/></svg>
+        <span class="logo-word">Dhoop</span>
+        <span class="logo-hi" lang="hi">धूप</span>
+      </a>
+      <p class="foot-line">Rooftop solar, run like a utility.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#calculator">Calculator</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <p class="fine">A concept project with sample content, designed and built for the Sankar Group front-end internship assignment.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
