@@ -7,4 +7,4 @@
 5. "Ask Dhoop" is a scripted AI assistant demo: it answers four sample questions about output, UPI dues and forecasts, draws a small chart, and lists the sources behind each answer. That connects the solar idea to Sankar Group's AI and fintech work.
 6. The savings calculator turns the page into a tool: sliders recalculate plant size, payback and a 25-year chart live, with the assumptions stated openly.
 7. Challenges: keeping the sun's whole path visible on narrow phones (the SVG is cropped, so JS computes the visible width), avoiding horizontal overflow, and making the form accessible (inline errors, focus on the first error, a focused success state).
-8. Built with plain HTML, CSS and JavaScript so I can explain every line.
+8. Built with plain HTML, CSS and JavaScript.
